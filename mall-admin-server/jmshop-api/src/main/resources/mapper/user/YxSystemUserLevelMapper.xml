@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxSystemUserLevelMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, mer_id, name, money, valid_date, is_forever, is_pay, is_show, grade, discount, image, icon, `explain`, add_time, is_del
+    </sql>
+
+    <select id="getYxSystemUserLevelById" resultType="co.yixiang.modules.user.web.vo.YxSystemUserLevelQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_user_level where id = #{id}
+    </select>
+
+    <select id="getYxSystemUserLevelPageList" resultType="co.yixiang.modules.user.web.vo.YxSystemUserLevelQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_user_level where is_show = 1 and is_del = 0
+    </select>
+
+</mapper>

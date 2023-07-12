@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreProductReplyMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, oid, unique, product_id, reply_type, product_score, service_score, comment, pics, add_time, merchant_reply_content, merchant_reply_time, is_del, is_reply
+    </sql>
+
+    <select id="getYxStoreProductReplyById" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductReplyQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product_reply where id = #{id}
+    </select>
+
+    <select id="getYxStoreProductReplyPageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductReplyQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product_reply
+    </select>
+
+</mapper>

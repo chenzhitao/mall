@@ -1,0 +1,31 @@
+.grid-4.data-v-4d3612c0 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 42rpx;
+}
+.category-page.data-v-4d3612c0 {
+  margin: 16rpx 15rpx 0;
+  padding: 30rpx 19rpx 28rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.category-page .title.data-v-4d3612c0 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #111111;
+  line-height: 27rpx;
+}
+.category-page .tip.data-v-4d3612c0 {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #999999;
+  line-height: 22rpx;
+  margin-top: 9rpx;
+}
+.category-page .img.data-v-4d3612c0 {
+  margin-top: 24rpx;
+  width: 140rpx;
+  height: 140rpx;
+}
+

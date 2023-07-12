@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreCouponMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, integral, coupon_price, use_min_price, coupon_time, sort, status, add_time, is_del,type,remark,time_type,time_num
+    </sql>
+
+    <select id="getYxStoreCouponById" resultType="co.yixiang.modules.shop.web.vo.YxStoreCouponQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_coupon where id = #{id}
+    </select>
+
+    <select id="getYxStoreCouponPageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreCouponQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_coupon
+    </select>
+
+</mapper>

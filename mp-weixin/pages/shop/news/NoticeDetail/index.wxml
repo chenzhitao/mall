@@ -1,0 +1,1 @@
+<view class="newsDetail data-v-be126e70"><view class="title data-v-be126e70">{{noticeInfo.info}}</view><view class="newsContent data-v-be126e70"><rich-text nodes="{{$root.m0}}" class="data-v-be126e70"></rich-text></view></view>

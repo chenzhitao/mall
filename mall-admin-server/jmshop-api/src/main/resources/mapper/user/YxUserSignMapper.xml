@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxUserSignMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, title, number, balance, add_time
+    </sql>
+
+    <select id="getYxUserSignById" resultType="co.yixiang.modules.user.web.vo.YxUserSignQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_sign where id = #{id}
+    </select>
+
+    <select id="getYxUserSignPageList" resultType="co.yixiang.modules.user.web.vo.YxUserSignQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_sign
+    </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.order.mapper.YxStoreOrderMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, uid, real_name, user_phone, user_address, cart_id, freight_price, total_num, total_price, total_postage, pay_price, pay_postage, deduction_price, coupon_id, coupon_price, paid, pay_time, pay_type, add_time, status, refund_status, refund_reason_wap_img, refund_reason_wap_explain, refund_reason_time, refund_reason_wap, refund_reason, refund_price, delivery_name, delivery_type, delivery_id, gain_integral, use_integral, back_integral, mark, is_del, `unique`, remark, mer_id, is_mer_check, combination_id, pink_id, cost, seckill_id, bargain_id, verify_code, store_id, shipping_type, is_channel, is_remind, is_system_del
+    </sql>
+
+    <select id="getYxStoreOrderById" resultType="co.yixiang.modules.order.web.vo.YxStoreOrderQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_order where id = #{id}
+    </select>
+
+    <select id="getYxStoreOrderPageList" resultType="co.yixiang.modules.order.web.vo.YxStoreOrderQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_order
+    </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxSystemStoreStaffMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, nickname, avatar, store_id, store_name, staff_name, phone, verify_status, status, add_time
+    </sql>
+
+    <select id="getYxSystemStoreStaffById" resultType="co.yixiang.modules.shop.web.vo.YxSystemStoreStaffQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_store_staff where id = #{id}
+    </select>
+
+    <select id="getYxSystemStoreStaffPageList" resultType="co.yixiang.modules.shop.web.vo.YxSystemStoreStaffQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_store_staff
+    </select>
+
+</mapper>

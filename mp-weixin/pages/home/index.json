@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "小象智慧农庄首页",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "banner": "/pages/home/components/Banner",
+    "hot-commodity-v2": "/pages/home/components/HotCommodity-v2",
+    "directory": "/pages/home/components/Directory",
+    "first-new-product-v2": "/pages/home/components/FirstNewProduct-v2",
+    "category": "/pages/home/components/Category",
+    "series-product": "/pages/home/components/SeriesProduct",
+    "promotion-good-item": "/pages/home/components/PromotionGoodItem"
+  }
+}

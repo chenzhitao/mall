@@ -1,0 +1,69 @@
+.flash-sale.data-v-2047ad1a {
+  background: #f5f5f5 !important;
+  height: 100%;
+}
+.timeScroll.data-v-2047ad1a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.list.data-v-2047ad1a {
+  padding: 0 20rpx;
+}
+.list .item.data-v-2047ad1a {
+  padding: 25rpx;
+  border-bottom: 1px solid #f0f0f0;
+  height: auto;
+  position: relative;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+}
+.logoPic.data-v-2047ad1a {
+  width: 75rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.logoPic image.data-v-2047ad1a {
+  width: 75rpx;
+  height: 70rpx;
+}
+.timeItem.data-v-2047ad1a {
+  font-size: 22rpx;
+  color: #282828;
+  width: 150rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  background-color: none;
+}
+.timeItem.active .time.data-v-2047ad1a {
+  color: #eb3729;
+}
+.timeItem.active .state.data-v-2047ad1a {
+  background: linear-gradient(90deg, #00c17b, #00c17b);
+  color: #fff;
+  opacity: 1;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  font-weight: 800;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+.timeItem .time.data-v-2047ad1a {
+  font-size: 32rpx;
+  font-weight: bold;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.timeItem .state.data-v-2047ad1a {
+  height: 37rpx;
+  line-height: 37rpx;
+}
+.activity.data-v-2047ad1a {
+  color: #333;
+}
+.flash-sale .list .item .grab.data-v-2047ad1a {
+  background-color: #999;
+}
+

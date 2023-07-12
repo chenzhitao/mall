@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreProductMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, mer_id, image,video,haibao_image, slider_image, store_name, store_info, keyword, bar_code, cate_id,
+        price, vip_price, ot_price, postage, unit_name, sort, sales, stock, is_show, is_hot, is_benefit, is_best, is_new,
+        description, add_time, is_postage, is_del,is_rank, mer_use, give_integral, cost, is_seckill, is_bargain,
+        is_good, ficti, browse, code_path, soure_link,qrcode_image
+    </sql>
+
+    <select id="getYxStoreProductById" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product where is_del=0 and is_show=1 and id = #{id}
+    </select>
+    <select id="getYxStoreProductById" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product where is_del=0 and is_show=1 and id = #{id}
+    </select>
+
+    <select id="getYxStoreProductByCateIds" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo" parameterType="String">
+        select <include refid="Base_Column_List"/> from yx_store_product where is_del=0 and is_show=1 and cate_id in (${cateId})
+    </select>
+
+
+  <select id="getYxStoreProductByTemplateId" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo" parameterType="String">
+      select a.id, a.mer_id, a.image,a.video,haibao_image,a.slider_image,IFNULL(b.product_name,a.store_name) as store_name,a.store_info,a.keyword,a.bar_code,
+             a.cate_id,a.price,a.vip_price,a.ot_price,a.postage,a.unit_name,a.sort,a.sales,a.stock,a.is_show,a.is_hot,a.is_benefit,a.is_best,a.is_new,a.description,
+             a.add_time,a.is_postage,a.is_del,a.mer_use,a.give_integral,a.cost,a.is_seckill,a.is_bargain,a.is_good,a.ficti,a.browse,a.code_path,a.soure_link,a.is_rank,
+             a.qrcode_image
+      from yx_store_product a,
+      yx_product_template_item b
+      where a.id=b.product_id and b.template_id in (${cateId})
+    </select>
+
+    <select id="getYxStoreProductByVideoId" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo" parameterType="String">
+        select a.id, a.mer_id, a.image,a.video,haibao_image,a.slider_image,IFNULL(b.product_name,a.store_name) as store_name,a.store_info,a.keyword,a.bar_code,
+               a.cate_id,a.price,a.vip_price,a.ot_price,a.postage,a.unit_name,a.sort,a.sales,a.stock,a.is_show,a.is_hot,a.is_benefit,a.is_best,a.is_new,a.description,
+               a.add_time,a.is_postage,a.is_del,a.mer_use,a.give_integral,a.cost,a.is_seckill,a.is_bargain,a.is_good,a.ficti,a.browse,a.code_path,a.soure_link,a.is_rank,
+               a.qrcode_image
+        from yx_store_product a,
+             yx_video_product b
+        where a.id=b.product_id and b.video_id in (${cateId}) order by b.sort_no asc
+    </select>
+
+    <select id="getYxStoreProductPageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product
+    </select>
+
+</mapper>

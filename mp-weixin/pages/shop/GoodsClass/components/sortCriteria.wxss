@@ -1,0 +1,23 @@
+.text.data-v-30304699 {
+  padding: 20rpx 27rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #A0A0A0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-black.data-v-30304699 {
+  color: #197A01 !important;
+}
+.img.data-v-30304699 {
+  width: 18rpx;
+  height: 22rpx;
+  margin-left: 7rpx;
+}
+.sort-box.data-v-30304699 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #DFDADA;
+}
+

@@ -1,0 +1,18 @@
+.product-con .wrapper.data-v-25121e86 {
+  padding-bottom: 26rpx;
+}
+.noscroll.data-v-25121e86 {
+  height: 100%;
+  overflow: hidden;
+}
+.product-con .footer-group .bnt.data-v-25121e86 {
+  width: 43%;
+}
+.footer-group button.data-v-25121e86 {
+  border: 0;
+  background: none;
+}
+.product-con .footer-group .bnt.bg-color-violet.data-v-25121e86 {
+  background-color: #fa8013;
+}
+

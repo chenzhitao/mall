@@ -1,0 +1,51 @@
+@font-face {font-family: "iconfont";
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKUAAsAAAAABlAAAAJJAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApcdgE2AiQDCAsGAAQgBYRtBy8bmwXIrjBu4UkbIjvjLimCmu1EP9KHAd4jgmi/3+zde18toRbpnkUTzRKRUkgQE6RA9xL+tMuG6RYp8bFsgmbcecAB9mDhH67tDS3pQsIsmSbPL7chM1RKsFr5mNDBoUDPJItlaZG8fvhi/tciWcbRfJ7L6U2gA1l9oBz3orEmTRpAvTigAPfCKLISSiNtGLvAJdwn0DCHgMfN/kgLK1jLAvE0p7YWzoUVCparCZWavYV4U6qllxTNa/j5+JeKMEmZWQ1njw1PK39hF+TnFG59QoSADpfI2AEUxFVt+oQpGIc10pYlYF+1wRfTfZfYq12wv86qboEZqLgnpau61VyC21L06V8d9cuJmT795hWPJp8ayHj0wrZNx+/+1Nzdf8MBtu9H2p+tgB5tn/W1PEZvgeD5Xf/if61ZgE9foa3Qz0ttd57gtyh79hS62nKmQlXWDiczp2tqaGAK+we+sZbxPeRDzXiEt2o2RVazQhbsDkpNu6io2UPDNn24aagxRVHHlgkQehaSjg9kPYcs2IvSxENFL0w03ASd2bQW82is0d6iB+YE2ZWCOO5tNKodIN0xe51Vh/wE15t5DGQsUcy1UOB6jg19T1NjSyCsJQcFHkPGJJS1XKC7jaXtVpV4nNS9KGYl16KOrCHbFvIA4wRkLkkg/uitaOn9A4jaYWzrlq6a/ARa25hPDiRG9CBbBtGr616e6faolGGLAMGaxAEFZiGGkUCpn7WAXFsxaURSKeH2oNDXEFvfxL/uGDRY1hT2lKy8Y3KDmgYA') format('woff2')
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e622";
+}
+.wyb-popup-box{
+	position: fixed;
+	transition-timing-function: ease-out;
+	transition-property: opacity, -webkit-transform;
+	transition-property: opacity, transform;
+	transition-property: opacity, transform, -webkit-transform;
+}
+.wyb-popup-container {
+	position: relative;
+	box-sizing: border-box;
+}
+.wyb-popup-slot {
+	width: 100%;
+	height: 100%;
+}
+.wyb-popup-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition-timing-function: ease;
+	transition-property: opacity, -webkit-transform;
+	transition-property: opacity, transform;
+	transition-property: opacity, transform, -webkit-transform;
+}
+.wyb-popup-close {
+	position: absolute;
+	fontSize: 40rpx;
+	color: #808080;
+	z-index: 20000;
+}
+.wyb-popup-custom-close {
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+

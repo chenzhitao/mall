@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxUserTaskFinishMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, task_id, uid, status, add_time
+    </sql>
+
+    <select id="getYxUserTaskFinishById" resultType="co.yixiang.modules.user.web.vo.YxUserTaskFinishQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_task_finish where id = #{id}
+    </select>
+
+    <select id="getYxUserTaskFinishPageList" resultType="co.yixiang.modules.user.web.vo.YxUserTaskFinishQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_task_finish
+    </select>
+
+</mapper>

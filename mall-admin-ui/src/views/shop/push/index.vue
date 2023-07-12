@@ -1,0 +1,194 @@
+<template>
+  <div class="app-container">
+    <!--工具栏-->
+    <div class="head-container">
+      <div v-if="crud.props.searchToggle">
+        <!-- 搜索 -->
+        <el-input v-model="query.value" clearable placeholder="输入搜索内容" style="width: 200px;" class="filter-item" @keyup.enter.native="crud.toQuery" />
+        <el-select v-model="query.type" clearable placeholder="类型" class="filter-item" style="width: 130px">
+          <el-option v-for="item in queryTypeOptions" :key="item.key" :label="item.display_name" :value="item.key" />
+        </el-select>
+        <rrOperation :crud="crud" />
+      </div>
+      <!--如果想在工具栏加入更多按钮，可以使用插槽方式， slot = 'left' or 'right'-->
+      <crudOperation :permission="permission" />
+      <!--表单组件-->
+      <el-dialog :close-on-click-modal="false" :before-close="crud.cancelCU" :visible.sync="crud.status.cu > 0" :title="crud.status.title" width="500px">
+        <el-form ref="form" :model="form" :rules="rules" size="small" label-width="80px">
+          <el-form-item label="选择商品" prop="productId">
+            <cgood v-model="form.good"></cgood>
+          </el-form-item>
+          <el-form-item label="会员级别" prop="levelId">
+            <el-select v-model="form.levelId" style="width: 178px" placeholder="请先选择会员级别">
+              <el-option v-for="item in levelOptions" :key="item.id" :label="item.name" :value="item.id"/>
+            </el-select>
+          </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+          <el-button type="text" @click="crud.cancelCU">取消</el-button>
+          <el-button :loading="crud.cu === 2" type="primary" @click="crud.submitCU">确认</el-button>
+        </div>
+      </el-dialog>
+      <!--表格渲染-->
+      <el-table ref="table" v-loading="crud.loading" :data="crud.data" size="small" style="width: 100%;" @selection-change="crud.selectionChangeHandler">
+        <el-table-column type="selection" width="55" />
+        <el-table-column v-if="columns.visible('id')" prop="id" label="id" width="55" />
+        <el-table-column v-if="columns.visible('image')" prop="image" label="商品图片" >
+          <template slot-scope="scope">
+            <a :href="scope.row.image" style="color: #42b983" target="_blank"><img :src="scope.row.image" alt="点击打开" class="el-avatar"></a>
+          </template>
+        </el-table-column>
+        <el-table-column v-if="columns.visible('staffName')" prop="staffName" label="会员级别" />
+        <el-table-column v-if="columns.visible('addTime')" prop="addTime" label="推送时间" >
+          <template slot-scope="scope">
+            <span>{{ parseTime(scope.row.addTime) }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column v-permission="['admin','yxSystemStoreStaff:edit','yxSystemStoreStaff:del']" label="操作" width="150px" align="center">
+          <template slot-scope="scope">
+            <udOperation
+              :data="scope.row"
+              :permission="permission"
+            />
+          </template>
+        </el-table-column>
+      </el-table>
+      <!--分页组件-->
+      <pagination />
+    </div>
+  </div>
+</template>
+
+<script>
+import crudYxSystemStoreStaff, { find } from '@/api/yxSystemStoreStaff'
+import CRUD, { presenter, header, form, crud } from '@crud/crud'
+import rrOperation from '@crud/RR.operation'
+import crudOperation from '@crud/CRUD.operation'
+import udOperation from '@crud/UD.operation'
+import pagination from '@crud/Pagination'
+import cgood from '@/views/components/good'
+import {getLevels} from "@/api/yxSystemUserLevel";
+
+// crud交由presenter持有
+const defaultCrud = CRUD({ title: '推送商品', url: 'api/yxSystemStoreStaff', sort: 'id,desc', crudMethod: { ...crudYxSystemStoreStaff }})
+const defaultForm = { good: {productId: null, storeName: null,image: null,otPrice:null,price:null}, spreadUser: {uid: null,nickname: null, avatar: null}, id: null, uid: null, avatar: null, spreadUid: null, spreadAvatar: null, spreadNickname: null, storeId: null, staffName: null, phone: null, verifyStatus: 1, status: null, addTime: null, nickname: null, storeName: null }
+export default {
+  name: 'push',
+  components: { pagination, crudOperation, rrOperation, udOperation, cgood },
+  mixins: [presenter(defaultCrud), header(), form(defaultForm), crud()],
+  data() {
+    return {
+      mystores: [],
+      permission: {
+        add: ['admin', 'yxSystemStoreStaff:add'],
+        edit: ['admin', 'yxSystemStoreStaff:edit'],
+        del: ['admin', 'yxSystemStoreStaff:del'],
+        find: ['admin', 'yxSystemStoreStaff:find']
+      },
+      rules: {
+        // uid: [
+        //   { required: true, message: '微信用户id不能为空', trigger: 'blur' }
+        // ],
+        // avatar: [
+        //   { required: true, message: '店员头像不能为空', trigger: 'blur' }
+        // ],
+        // storeId: [
+        //   { required: true, message: '门店id不能为空', trigger: 'blur' }
+        // ],
+        // staffName: [
+        //   { required: true, message: '店员名称不能为空', trigger: 'blur' }
+        // ],
+        // phone: [
+        //   { required: true, message: '手机号码不能为空', trigger: 'blur' }
+        // ],
+        // verifyStatus: [
+        //   { required: true, message: '核销开关不能为空', trigger: 'blur' }
+        // ],
+        // nickname: [
+        //   { required: true, message: '微信昵称不能为空', trigger: 'blur' }
+        // ]
+      },
+      queryTypeOptions: [
+        { key: 'staffName', display_name: '店员名称' },
+        { key: 'nickname', display_name: '微信昵称' }
+      ],
+      levelOptions:[],
+      storeName: null,
+      image: null,
+      otPrice:null,
+      price:null
+    }
+  },
+  methods: {
+    // 获取数据前设置好接口地址
+    [CRUD.HOOK.beforeRefresh]() {
+      const query = this.query
+      console.log('query:'+query.value)
+      if (query.type && query.value) {
+        this.crud.params[query.type] = query.value
+      }else{
+        delete this.crud.params.staffName
+        delete this.crud.params.nickname
+      }
+      return true
+    },
+    //新增与编辑前做的操作
+    [CRUD.HOOK.afterToCU](crud, form) {
+      getLevels({}).then(({ content })=>{
+        this.levelOptions = content;
+      })
+      console.log('storeName:'+this.form.good.productId)
+      this.form.storeName = form.good.storeName
+      this.form.good.image = form.good.image
+      this.form.otPrice = form.otPrice
+      this.form.price = form.good.price
+    },
+    // 校验是否有相同店长
+    checkSpread(form, type){
+      let params = {'uid': form.uid, 'spreadUid': form.spreadUid};
+      find(params).then(res => {
+        if(res.length > type){
+          this.$notify({
+            title: '已添加相同店长',
+            type: 'error',
+            duration: 2500
+          })
+          return false;
+        }
+      })
+    },
+    // 新增前
+    [CRUD.HOOK.beforeValidateCU](crud, form){
+      // let type = this.crud.status.add > CRUD.STATUS.NORMAL ? 0 : this.crud.status.edit > CRUD.STATUS.NORMAL ? 1 : 0;
+      // return this.checkSpread(this.form, type);
+    },
+    // 编辑前
+    [CRUD.HOOK.beforeToEdit](crud, form) {
+      this.form.good.productId = form.id
+      this.form.good.storeName = form.storeName
+      this.form.good.image = form.image
+      this.form.good.otPrice = form.otPrice
+      this.form.good.price = form.price
+
+      this.form.spreadUser.uid = form.spreadUid
+      this.form.spreadUser.avatar = form.spreadAvatar
+      this.form.spreadUser.nickname = form.spreadNickname
+    },
+    [CRUD.HOOK.beforeSubmit]() {
+      this.form.good.productId = form.id
+      this.form.good.storeName = form.storeName
+      this.form.good.image = form.image
+      this.form.good.otPrice = form.otPrice
+      this.form.good.price = form.price
+
+      this.form.spreadUid = this.form.spreadUser.uid
+      this.form.spreadAvatar = this.form.spreadUser.avatar
+      this.form.spreadNickname = this.form.spreadUser.nickname
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>

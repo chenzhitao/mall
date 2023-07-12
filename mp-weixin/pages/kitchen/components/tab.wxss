@@ -1,0 +1,34 @@
+.tab-box.data-v-0cd59720 {
+  overflow: scroll;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 23rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.tab-box.data-v-0cd59720::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.tab-item.data-v-0cd59720 {
+  display: inline-block;
+  text-align: center;
+  padding: 28rpx 51rpx 30rpx 0;
+}
+.tab-item.data-v-0cd59720:last-of-type {
+  padding-right: 0;
+}
+.tab-text.data-v-0cd59720 {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #333333;
+}
+.tab-active-text.data-v-0cd59720 {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #197A01;
+}
+

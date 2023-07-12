@@ -1,0 +1,49 @@
+.video-box {
+  width: 750rpx;
+  height: 1342rpx;
+}
+.content-box {
+  padding: 22rpx 22rpx 100rpx;
+  background-color: #FFFFFF;
+}
+.title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #111111;
+  line-height: 36rpx;
+  margin-bottom: 7rpx;
+}
+.time {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #333333;
+  line-height: 36rpx;
+}
+.eye-img {
+  width: 34rpx;
+  height: 34rpx;
+}
+.view {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 36rpx;
+  margin-left: 6rpx ;
+}
+.tag {
+  margin-top: 31rpx;
+  width: -webkit-max-content;
+  width: max-content;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 36rpx;
+  padding: 3rpx 9rpx;
+  background: #197A01;
+  border-radius: 20rpx;
+}
+.line-top {
+  border-top: 1rpx solid #DFDADA;
+  margin-top: 17rpx;
+}
+

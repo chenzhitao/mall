@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "wyb-popup": "/components/wyb-popup/wyb-popup",
+    "product-con-swiper": "/components/ProductConSwiper",
+    "user-evaluation": "/components/UserEvaluation",
+    "coupon-pop": "/components/CouponPop",
+    "store-poster": "/components/StorePoster",
+    "share-info": "/components/ShareInfo",
+    "preview-img": "/components/uni-popup/uni-popup-preview-img"
+  }
+}

@@ -1,0 +1,33 @@
+.goods-item-box {
+  margin-bottom: 5rpx;
+  background: #FAFAFA;
+  border-radius: 8rpx;
+}
+.goods-item-box .img {
+  width: 100%;
+  height: 485rpx;
+  border-radius: 8rpx;
+}
+.goods-item-box .title {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #111111;
+  margin: 24rpx 18rpx;
+  line-height: 46rpx;
+}
+.goods-item-box .time {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #333333;
+}
+.goods-item-box .eye-img {
+  width: 34rpx;
+  height: 34rpx;
+}
+.goods-item-box .text {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-left: 6rpx;
+}
+

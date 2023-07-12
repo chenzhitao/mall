@@ -1,0 +1,70 @@
+.promotion-good-item.data-v-21743561 {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.promotion-good-item .goods-img.data-v-21743561 {
+  width: 100%;
+  height: 345rpx;
+}
+.promotion-good-item .content-box.data-v-21743561 {
+  padding: 12rpx 18rpx 16rpx;
+}
+.promotion-good-item .content-box .title.data-v-21743561 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #111111;
+  line-height: 32rpx;
+}
+.promotion-good-item .content-box .tip.data-v-21743561 {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #999999;
+  line-height: 23rpx;
+  margin-top: 12rpx;
+}
+.promotion-good-item .content-box .sales-num.data-v-21743561 {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #666666;
+  line-height: 23rpx;
+  margin-top: 9rpx;
+}
+.promotion-good-item .content-box .price1.data-v-21743561 {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #F67042;
+  line-height: 16rpx;
+}
+.promotion-good-item .content-box .price2.data-v-21743561 {
+  font-size: 28rpx;
+  font-weight: 800;
+  color: #F67042;
+  line-height: 22rpx;
+}
+.promotion-good-item .content-box .plus-img.data-v-21743561 {
+  width: 32rpx;
+  height: 32rpx;
+}
+.promotion-good-item .content-box .tag.data-v-21743561 {
+  width: 100%;
+  padding: 9rpx 11rpx;
+  margin-top: 26rpx;
+  background: #FCF3E2;
+  border: 1px solid #E2C898;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.promotion-good-item .content-box .tag .tag-img.data-v-21743561 {
+  width: 20rpx;
+  height: 22rpx;
+}
+.promotion-good-item .content-box .tag .tag-text.data-v-21743561 {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #997038;
+  line-height: 22rpx;
+  margin-left: 14rpx;
+}
+

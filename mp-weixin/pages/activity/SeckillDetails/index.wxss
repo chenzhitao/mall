@@ -1,0 +1,12 @@
+.noscroll.data-v-657dca4d {
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-con .nav.data-v-657dca4d {
+  padding: 0 20rpx;
+}
+.product-con .footer .bnt .buy.bg-color-hui.data-v-657dca4d {
+  background: #ccc;
+}
+

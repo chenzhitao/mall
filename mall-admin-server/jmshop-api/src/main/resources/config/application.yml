@@ -1,0 +1,132 @@
+server:
+  servlet:
+    context-path: /api
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 800
+    accept-count: 30000
+    min-spare-threads: 20
+    max-connections: 30000
+#    key-alias: client
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  freemarker:
+    check-template-location: false
+  profiles:
+    active: prod
+    #active: test
+    #active: dev
+  jackson:
+    time-zone: GMT+8
+  data:
+    redis:
+      repositories:
+        enabled: false
+  #配置 Jpa
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: true
+
+#配置rocketmq
+#rocketmq:
+#  nameServer: localhost:9876
+#  producer:
+#    group: jmshop-group
+#    sendMessageTimeout: 300000
+
+
+
+#七牛云
+qiniu:
+  # 文件大小 /M
+  max-size: 15
+
+#邮箱验证码有效时间/分钟
+code:
+  expiration: 5
+
+#登录图形验证码有效时间/分钟
+loginCode:
+  expiration: 2
+
+mybatis-plus:
+  check-config-location: true
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: id_worker
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+
+
+
+# sm.ms 图床的 token
+smms:
+  token: 1oOP3ykFDI0K6ifmtvU7c8Y1eTWZSlyl
+
+#密码加密传输，前端公钥加密，后端私钥解密
+rsa:
+  private_key: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0vfvyTdGJkdbHkB8mp0f3FE0GYP3AYPaJF7jUd1M0XxFSE2ceK3k2kw20YvQ09NJKk+OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==
+
+jmshop:
+  #通知相关配置
+  notify:
+    # 短消息模版通知配置
+    # 短信息用于通知客户，例如发货短信通知，注意配置格式；template-name，template-templateId 请参考 NotifyType 枚举值
+    sms:
+      enable: false
+      # 如果是腾讯云短信，则设置active的值tencent
+      # 如果是阿里云短信，则设置active的值aliyun
+      active: aliyun
+      sign: jmshop
+      template:
+        - name: paySucceed
+          templateId: 156349
+        - name: captcha
+          templateId: SMS_182680588
+        - name: ship
+          templateId: 158002
+        - name: refund
+          templateId: 159447
+      tencent:
+        appid: 111111111
+        appkey: xxxxxxxxxxxxxx
+      aliyun:
+        regionId: cn-hangzhou
+        accessKeyId:
+        accessKeySecret:
+
+
+  # 快鸟物流查询配置
+  express:
+    enable: true
+    appId: 1790093
+    appKey: e4b0ece5-fc91-4066-ad49-fa0a95adaeae
+
+
+#华为云OBS云存储
+huaweicloud:
+  obs:
+    end_point: obs.cn-south-1.myhuaweicloud.com
+    accessible_domain_name: https://zhuozhong-mall.obs.cn-south-1.myhuaweicloud.com
+    access_key_id: KA1V7LLDFN6O8KJQNXDZ
+    secret_access_key: w25sh84S4oUUYeJTz343ly9peb2D0vwfQaOhiIBE
+    bucket_name: zhuozhong-mall
+    local_file_path: /www/wwwlogs
+    cloud_file_path: mall/objservice
+

@@ -1,0 +1,1 @@
+<view class="showimg-box data-v-2565abd6"><block wx:if="{{stock<=0}}"><view class="show-info data-v-2565abd6">已售完</view></block><image class="img data-v-2565abd6" src="{{image}}" lazy-load="{{true}}" mode="aspectFill"></image></view>

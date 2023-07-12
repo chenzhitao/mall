@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "砍价记录",
+  "usingComponents": {
+    "count-down": "/components/CountDown",
+    "loading": "/components/Loading"
+  }
+}

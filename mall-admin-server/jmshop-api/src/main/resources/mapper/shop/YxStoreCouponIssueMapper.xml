@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreCouponIssueMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, cid, start_time, end_time, total_count, remain_count, is_permanent, status, is_del, add_time,
+        type,category_id,category_name,time_type,time_num
+    </sql>
+
+    <select id="getYxStoreCouponIssueById" resultType="co.yixiang.modules.shop.web.vo.YxStoreCouponIssueQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_coupon_issue where id = #{id}
+    </select>
+
+    <select id="getYxStoreCouponIssuePageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreCouponIssueQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_coupon_issue
+    </select>
+
+</mapper>

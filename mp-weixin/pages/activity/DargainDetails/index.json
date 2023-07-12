@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "帮砍价",
+  "usingComponents": {
+    "count-down": "/components/CountDown"
+  }
+}

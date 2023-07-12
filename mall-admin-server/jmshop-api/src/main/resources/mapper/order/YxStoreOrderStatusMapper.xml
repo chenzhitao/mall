@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.order.mapper.YxStoreOrderStatusMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, oid, change_type, change_message, change_time
+    </sql>
+
+    <select id="getYxStoreOrderStatusById" resultType="co.yixiang.modules.order.web.vo.YxStoreOrderStatusQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_order_status where id = #{id}
+    </select>
+
+    <select id="getYxStoreOrderStatusPageList" resultType="co.yixiang.modules.order.web.vo.YxStoreOrderStatusQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_order_status
+    </select>
+
+</mapper>

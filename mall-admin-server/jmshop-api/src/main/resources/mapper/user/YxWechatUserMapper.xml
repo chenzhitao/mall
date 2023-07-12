@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxWechatUserMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uid, unionid, openid, routine_openid, nickname, headimgurl, sex, city, language, province, country, remark, groupid, tagid_list, subscribe, subscribe_time, add_time, stair, second, order_stair, order_second, now_money, session_key, user_type
+    </sql>
+
+    <select id="getYxWechatUserById" resultType="co.yixiang.modules.user.web.vo.YxWechatUserQueryVo">
+        select <include refid="Base_Column_List"/> from yx_wechat_user where uid = #{id}
+    </select>
+
+    <select id="getYxWechatUserPageList" resultType="co.yixiang.modules.user.web.vo.YxWechatUserQueryVo">
+        select <include refid="Base_Column_List"/> from yx_wechat_user
+    </select>
+
+</mapper>

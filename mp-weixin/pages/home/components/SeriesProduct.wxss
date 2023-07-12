@@ -1,0 +1,69 @@
+.grid-3.data-v-1006b126 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 4rpx;
+}
+.series-product-page.data-v-1006b126 {
+  margin: 16rpx 15rpx 0;
+}
+.series-product-page .header-box.data-v-1006b126 {
+  padding: 26rpx 15rpx;
+  background: #EAFFD9;
+}
+.series-product-page .header-box .title.data-v-1006b126 {
+  font-size: 46rpx;
+  font-weight: bold;
+  color: #111111;
+  line-height: 43rpx;
+}
+.series-product-page .header-box .tip.data-v-1006b126 {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #111111;
+  line-height: 23rpx;
+}
+.series-product-page .ad-img.data-v-1006b126 {
+  width: 100%;
+}
+.series-product-page .goods-box.data-v-1006b126 {
+  margin-top: 8rpx;
+}
+.series-product-page .goods-box .goods-item.data-v-1006b126 {
+  background: #FFFFFF;
+}
+.series-product-page .goods-box .goods-item .goods-img.data-v-1006b126 {
+  width: 100%;
+  height: 176rpx;
+}
+.series-product-page .goods-box .goods-item .goods-title.data-v-1006b126 {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #666666;
+  line-height: 24rpx;
+  margin-bottom: 12rpx;
+  height: 48rpx;
+}
+.series-product-page .goods-box .goods-item .price1.data-v-1006b126 {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #F67042;
+  line-height: 16rpx;
+}
+.series-product-page .goods-box .goods-item .price2.data-v-1006b126 {
+  font-size: 28rpx;
+  font-weight: 800;
+  color: #F67042;
+  line-height: 22rpx;
+}
+.series-product-page .goods-box .goods-item .price3.data-v-1006b126 {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #F67042;
+  line-height: 19rpx;
+}
+.series-product-page .goods-box .goods-item .plus-img.data-v-1006b126 {
+  width: 32rpx;
+  height: 32rpx;
+}
+

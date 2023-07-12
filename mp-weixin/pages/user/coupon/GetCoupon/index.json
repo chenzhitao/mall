@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "领取优惠券",
+  "usingComponents": {
+    "loading": "/components/Loading",
+    "data-format-t": "/components/DataFormatT"
+  }
+}

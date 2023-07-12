@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxSystemAttachmentMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        att_id, name, att_dir, satt_dir, att_size, att_type, pid, time, image_type, module_type
+    </sql>
+
+    <select id="getYxSystemAttachmentById" resultType="co.yixiang.modules.user.web.vo.YxSystemAttachmentQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_attachment where att_id = #{id}
+    </select>
+
+    <select id="getYxSystemAttachmentPageList" resultType="co.yixiang.modules.user.web.vo.YxSystemAttachmentQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_attachment
+    </select>
+
+</mapper>

@@ -1,0 +1,119 @@
+.page-box.data-v-439fa0b5 {
+  background-color: #FFFFFF;
+  min-height: 100vh;
+}
+.search-box.data-v-439fa0b5 {
+  height: 60rpx;
+  background: #EFEFEF;
+  border-radius: 30rpx;
+  margin: 25rpx 22rpx 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A4A4A6;
+  z-index: 1;
+}
+.search-box .icon.data-v-439fa0b5 {
+  font-size: 25rpx;
+  margin-right: 8rpx;
+}
+.search-box .search-text.data-v-439fa0b5 {
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 28rpx;
+}
+.tab-box.data-v-439fa0b5 {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 0 0 22rpx;
+  height: 156rpx;
+}
+.tab-box.data-v-439fa0b5::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.tab-item.data-v-439fa0b5 {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.tab-img.data-v-439fa0b5 {
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+}
+.tab-text.data-v-439fa0b5 {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 36rpx;
+}
+.tab-active-text.data-v-439fa0b5 {
+  height: 36rpx;
+  background: #197A01;
+  border-radius: 18rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4rpx 8rpx;
+  line-height: 30rpx;
+}
+.content-box.data-v-439fa0b5 {
+  margin-top: 10rpx;
+  display: flex;
+  border-top: 1rpx solid #DFDADA;
+}
+.left-box.data-v-439fa0b5 {
+  width: 168rpx;
+  overflow-y: scroll;
+}
+.left-box.data-v-439fa0b5::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.left-box .left-item.data-v-439fa0b5 {
+  height: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-box .left-text.data-v-439fa0b5 {
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 36rpx;
+  border-left: 8rpx solid transparent;
+}
+.left-box .left-active-text.data-v-439fa0b5 {
+  width: 100%;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #111111;
+  border-left: 8rpx solid #197A01;
+  text-align: center;
+  line-height: 46rpx;
+}
+.right-box.data-v-439fa0b5 {
+  flex: 1;
+  padding: 15rpx 20rpx 15rpx 0;
+  overflow-y: scroll;
+}
+.right-box.data-v-439fa0b5::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.right-box .filter-box.data-v-439fa0b5 {
+  height: 64rpx;
+}
+

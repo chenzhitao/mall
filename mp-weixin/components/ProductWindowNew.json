@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "preview-img": "/components/uni-popup/uni-popup-preview-img"
+  }
+}

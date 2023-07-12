@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.manage.mapper.YxExpressMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, sort, is_show
+    </sql>
+
+    <select id="getYxExpressById" resultType="co.yixiang.modules.manage.web.vo.YxExpressQueryVo">
+        select <include refid="Base_Column_List"/> from yx_express where id = #{id}
+    </select>
+
+    <select id="getYxExpressPageList" resultType="co.yixiang.modules.manage.web.vo.YxExpressQueryVo">
+        select <include refid="Base_Column_List"/> from yx_express
+    </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.activity.mapper.YxStoreBargainMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, title, image, unit_name, stock, sales, images, start_time, stop_time, store_name, price, min_price, num, bargain_max_price, bargain_min_price, bargain_num, status, description, give_integral, info, cost, sort, is_hot, is_del, add_time, is_postage, postage, rule, look, share
+    </sql>
+
+    <select id="getYxStoreBargainById" resultType="co.yixiang.modules.activity.web.vo.YxStoreBargainQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_bargain where id = #{id}
+    </select>
+
+    <select id="getYxStoreBargainPageList" resultType="co.yixiang.modules.activity.web.vo.YxStoreBargainQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_bargain
+    </select>
+
+</mapper>

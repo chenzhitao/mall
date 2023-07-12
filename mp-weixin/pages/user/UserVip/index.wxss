@@ -1,0 +1,66 @@
+.banner swiper.data-v-967485ac {
+  height: 328rpx;
+}
+.swiper-slide.data-v-967485ac {
+  margin: 0 auto;
+}
+.file.data-v-967485ac {
+  position: relative;
+  display: inline-block;
+  background: #00c17b;
+  border-radius: 4px;
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  text-indent: 0;
+  border-radius: 50rpx;
+  font-size: 35rpx;
+  width: 140rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.file input.data-v-967485ac {
+  position: absolute;
+  font-size: 48rpx;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+.img-box.data-v-967485ac {
+  border-radius: 0;
+  border: 1rpx solid #ddd;
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 10rpx;
+}
+.img-box image.data-v-967485ac {
+  width: 100%;
+  height: 100%;
+}
+.file-border.data-v-967485ac {
+  border: 1rpx solid #ddd;
+  height: 70rpx;
+  background: none;
+  width: 70rpx;
+  border-radius: 0;
+  color: #ddd;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 70rpx;
+  padding: 0;
+  font-weight: 100;
+}
+.file.data-v-967485ac:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+.file-name.data-v-967485ac {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #ee5959;
+}
+

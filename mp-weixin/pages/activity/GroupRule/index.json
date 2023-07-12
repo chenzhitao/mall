@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "团购规则",
+  "usingComponents": {
+    "count-down": "/components/CountDown"
+  }
+}

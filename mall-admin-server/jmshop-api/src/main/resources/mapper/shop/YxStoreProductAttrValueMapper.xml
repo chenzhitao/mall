@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreProductAttrValueMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, suk, stock, sales, price, image, unique, cost, wholesale, bar_code, packaging,ot_price
+    </sql>
+
+    <select id="getYxStoreProductAttrValueById" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductAttrValueQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product_attr_value where id = #{id}
+    </select>
+
+    <select id="getYxStoreProductAttrValuePageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreProductAttrValueQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_product_attr_value
+    </select>
+
+</mapper>

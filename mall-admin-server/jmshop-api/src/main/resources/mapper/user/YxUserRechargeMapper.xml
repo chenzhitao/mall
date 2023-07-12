@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxUserRechargeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, order_id, price, recharge_type, paid, pay_time, add_time, refund_price,system_user_level_id,type
+    </sql>
+
+    <select id="getYxUserRechargeById" resultType="co.yixiang.modules.user.web.vo.YxUserRechargeQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_recharge where id = #{id}
+    </select>
+
+    <select id="getYxUserRechargePageList" resultType="co.yixiang.modules.user.web.vo.YxUserRechargeQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_recharge
+    </select>
+
+</mapper>

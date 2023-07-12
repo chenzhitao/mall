@@ -1,0 +1,41 @@
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.btns .keepBnt1 {
+  width: 30%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #FFFFFF;
+  margin-right: 30rpx;
+  border-radius: 20rpx;
+  background-color: #478acc;
+}
+.btns .keepBnt2 {
+  width: 60%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #FFFFFF;
+  border-radius: 20rpx;
+}
+.class {
+  background-color: #f9fcff;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  height: 200rpx;
+}
+.class textarea {
+  width: 100%;
+  padding-left: 5rpx;
+  height: 200rpx;
+}
+.address text {
+  width: 100%;
+  display: block;
+}
+

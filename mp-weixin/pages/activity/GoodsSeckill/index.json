@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "秒杀",
+  "usingComponents": {
+    "count-down": "/components/CountDown"
+  }
+}

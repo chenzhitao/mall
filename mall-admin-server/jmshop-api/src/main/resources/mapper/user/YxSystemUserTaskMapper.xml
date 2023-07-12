@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxSystemUserTaskMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, real_name, task_type, number, level_id, sort, is_show, is_must, illustrate, add_time
+    </sql>
+
+    <select id="getYxSystemUserTaskById" resultType="co.yixiang.modules.user.web.vo.YxSystemUserTaskQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_user_task where id = #{id}
+    </select>
+
+    <select id="getYxSystemUserTaskPageList" resultType="co.yixiang.modules.user.web.vo.YxSystemUserTaskQueryVo">
+        select <include refid="Base_Column_List"/> from yx_system_user_task
+    </select>
+
+</mapper>

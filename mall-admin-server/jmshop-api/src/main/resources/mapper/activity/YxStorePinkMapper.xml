@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.activity.mapper.YxStorePinkMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, order_id, order_id_key, total_num, total_price, cid, pid, people, price, add_time, stop_time, k_id, is_tpl, is_refund, status
+    </sql>
+
+    <select id="getYxStorePinkById" resultType="co.yixiang.modules.activity.web.vo.YxStorePinkQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_pink where id = #{id}
+    </select>
+
+    <select id="getYxStorePinkPageList" resultType="co.yixiang.modules.activity.web.vo.YxStorePinkQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_pink
+    </select>
+
+</mapper>

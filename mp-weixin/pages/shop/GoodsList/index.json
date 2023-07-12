@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "recommend": "/components/Recommend",
+    "loading": "/components/Loading",
+    "product-window": "/components/ProductWindowNew",
+    "cart-window": "/components/CartWindow"
+  }
+}

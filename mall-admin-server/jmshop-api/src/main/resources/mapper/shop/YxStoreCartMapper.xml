@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.shop.mapper.YxStoreCartMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, type, product_id, product_attr_unique, cart_num, add_time, is_pay, is_del, is_new, combination_id, seckill_id, bargain_id, alter_price
+    </sql>
+
+    <select id="getYxStoreCartById" resultType="co.yixiang.modules.shop.web.vo.YxStoreCartQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_cart where id = #{id}
+    </select>
+
+    <select id="getYxStoreCartPageList" resultType="co.yixiang.modules.shop.web.vo.YxStoreCartQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_cart
+    </select>
+
+</mapper>

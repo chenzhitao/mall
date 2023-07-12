@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的积分",
+  "usingComponents": {
+    "loading": "/components/Loading",
+    "data-format": "/components/DataFormat"
+  }
+}

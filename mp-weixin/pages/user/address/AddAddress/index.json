@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新增收货地址",
+  "usingComponents": {
+    "simple-address": "/components/simple-address/simple-address",
+    "city-select": "/components/CitySelect"
+  }
+}

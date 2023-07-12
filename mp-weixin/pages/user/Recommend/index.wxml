@@ -1,0 +1,1 @@
+<view class="user"><block wx:if="{{$root.g0>0}}"><promotion-good vue-id="5780d1b2-1" benefit="{{recommend}}" bind:__l="__l"></promotion-good></block></view>

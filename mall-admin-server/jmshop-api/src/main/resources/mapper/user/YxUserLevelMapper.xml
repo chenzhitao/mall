@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.user.mapper.YxUserLevelMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, level_id, grade, valid_time, is_forever, mer_id, status, mark, remind, is_del, add_time, discount
+    </sql>
+
+    <select id="getYxUserLevelById" resultType="co.yixiang.modules.user.web.vo.YxUserLevelQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_level where id = #{id}
+    </select>
+
+    <select id="getYxUserLevelPageList" resultType="co.yixiang.modules.user.web.vo.YxUserLevelQueryVo">
+        select <include refid="Base_Column_List"/> from yx_user_level
+    </select>
+
+</mapper>

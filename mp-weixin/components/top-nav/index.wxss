@@ -1,0 +1,34 @@
+
+.iconbtn.data-v-36c6c643{
+		display: flex;
+		align-items: center;
+		height: 100%;
+		font-size: 36rpx;
+}
+.uni-navbar.data-v-36c6c643 {
+		display: block;
+		position: relative;
+		width: 100%;
+		background-color: #FFFFFF;
+		overflow: hidden;
+}
+.uni-navbar-shadow.data-v-36c6c643 {
+		box-shadow: 0 1px 6px #ccc;
+}
+.uni-navbar.uni-navbar-fixed.data-v-36c6c643 {
+		position: fixed;
+		z-index: 998;
+}
+.uni-navbar-header.data-v-36c6c643 {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 20rpx;
+}
+.uni-navbar-container-title.data-v-36c6c643{
+		font-size: 24rpx;
+}
+	
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员推荐",
+  "usingComponents": {
+    "promotion-good": "/components/PromotionGood"
+  }
+}

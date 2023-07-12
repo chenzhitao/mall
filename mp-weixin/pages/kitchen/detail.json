@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "美食厨房",
+  "usingComponents": {
+    "goods-item": "/pages/shop/GoodsClass/components/goodsItem"
+  }
+}

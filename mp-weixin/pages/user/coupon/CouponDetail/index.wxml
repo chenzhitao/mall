@@ -1,0 +1,1 @@
+<view data-ref="container" class="data-v-6061af78 vue-ref"><view class="data-v-6061af78"><rich-text class="data-v-6061af78"><rich-text nodes="{{buyInfo.remark}}"></rich-text></rich-text></view></view>

@@ -1,0 +1,35 @@
+.search-box.data-v-72b52904 {
+  padding: 25rpx 22rpx 0;
+  background-color: white;
+}
+.search-box .search-item.data-v-72b52904 {
+  height: 60rpx;
+  background: #EFEFEF;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A4A4A6;
+  z-index: 1;
+}
+.search-box .icon.data-v-72b52904 {
+  font-size: 25rpx;
+  margin-right: 8rpx;
+}
+.search-box .search-text.data-v-72b52904 {
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 28rpx;
+}
+.kitchen-page.data-v-72b52904 {
+  min-height: 100vh;
+}
+.content-box.data-v-72b52904 {
+  padding: 0 8rpx 50rpx;
+}
+.grid-2.data-v-72b52904 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column-gap: 10rpx;
+}
+

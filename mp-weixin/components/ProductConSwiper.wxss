@@ -1,0 +1,12 @@
+.swiper-page.data-v-5af78446 {
+  position: relative;
+}
+.swiper-page .video-box.data-v-5af78446 {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+

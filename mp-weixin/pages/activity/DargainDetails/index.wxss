@@ -1,0 +1,52 @@
+.bargain.on .bargain-box {
+  background: #fff;
+  width: auto;
+  margin: 0 20rpx;
+  border: 0;
+}
+.bargain.on .header {
+  height: auto;
+  text-align: left;
+}
+.bargain.on .header .time {
+  text-align: left;
+  font-size: 24rpx;
+  margin: 0;
+  padding: 0;
+  padding: 20rpx;
+  width: auto;
+  height: auto;
+}
+page {
+  background-color: #f5f5f5 !important;
+}
+.bargainBnt_hui {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #fff;
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #bbb;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 32rpx;
+}
+.bargain_view {
+  left: 0;
+  right: 0;
+  height: 48rpx;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  border-radius: 0 0 6rpx 6rpx;
+  position: absolute;
+  bottom: 0;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 48rpx;
+}
+.iconfonts {
+  font-size: 22rpx;
+}
+

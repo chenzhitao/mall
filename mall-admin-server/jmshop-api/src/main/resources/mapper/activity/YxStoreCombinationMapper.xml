@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yixiang.modules.activity.mapper.YxStoreCombinationMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, mer_id, image, images, title, attr, people, info, price, sort, sales, stock, add_time, is_host, is_show, is_del, combination, mer_use, is_postage, postage, description, start_time, stop_time, effective_time, cost, browse, unit_name, end_time_date, start_time_date
+    </sql>
+
+    <select id="getYxStoreCombinationById" resultType="co.yixiang.modules.activity.web.vo.YxStoreCombinationQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_combination where id = #{id}
+    </select>
+
+    <select id="getYxStoreCombinationPageList" resultType="co.yixiang.modules.activity.web.vo.YxStoreCombinationQueryVo">
+        select <include refid="Base_Column_List"/> from yx_store_combination
+    </select>
+
+</mapper>
